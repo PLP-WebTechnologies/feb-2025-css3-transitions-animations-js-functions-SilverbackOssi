@@ -1,0 +1,68 @@
+body {
+  font-family: sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+header, footer {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #357ab8;
+}
+
+.box-container {
+  margin-top: 30px;
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: #f39c12;
+  border-radius: 10px;
+  line-height: 100px;
+  font-size: 2rem;
+  animation: floatIn 1s ease-out;
+}
+
+/* Triggered animation */
+.animate-jump {
+  animation: jump 0.5s ease;
+}
+
+/* CSS Keyframes */
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Light / Dark Themes */
+body.light {
+  background: #ffffff;
+  color: #333;
+}
+
+body.dark {
+  background: #1c1c1c;
+  color: #f1f1f1;
+}
